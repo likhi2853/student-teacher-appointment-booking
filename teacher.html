@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <h1>Teacher Dashboard</h1>
+    
+    <!-- Section for managing appointments -->
+    <section>
+        <h2>Manage Appointments</h2>
+        <div id="appointments">
+            <!-- Appointment entries will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Section for viewing messages -->
+    <section>
+        <h2>Messages from Students</h2>
+        <div id="messages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+    </section>
+
+    <script src="../firebase/firebaseConfig.js"></script>
+    <script type="module" src="teacher.js"></script>
+</body>
+</html>
