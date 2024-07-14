@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <h1>Student Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../auth/login.html" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Book an Appointment</h2>
+        <form id="book-appointment-form">
+            <label for="teacher-select">Select Teacher:</label>
+            <select id="teacher-select" required>
+                <!-- Teachers will be dynamically populated here -->
+            </select>
+            <br>
+            <label for="appointment-date">Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" required>
+            <br>
+            <label for="appointment-time">Time:</label>
+            <input type="time" id="appointment-time" name="appointment-time" required>
+            <br>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Scheduled Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Teacher</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="appointments-list">
+                <!-- Appointments will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="../firebase/firebaseConfig.js"></script>
+    <script type="module" src="student.js"></script>
+</body>
+</html>
