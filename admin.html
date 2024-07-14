@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../auth/login.html" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Add Teacher</h2>
+        <form id="add-teacher-form">
+            <label for="teacher-name">Name:</label>
+            <input type="text" id="teacher-name" name="teacher-name" required>
+            <br>
+            <label for="teacher-email">Email:</label>
+            <input type="email" id="teacher-email" name="teacher-email" required>
+            <br>
+            <button type="submit">Add Teacher</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Teachers List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="teachers-list">
+                <!-- Teachers will be dynamically populated here -->
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Logs</h2>
+        <div id="logs-list">
+            <!-- Logs will be dynamically populated here -->
+        </div>
+    </section>
+
+    <script src="../firebase/firebaseConfig.js"></script>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
